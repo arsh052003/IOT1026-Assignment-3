@@ -7,15 +7,15 @@ public class Pack
     private int _maxCount;
     private float _maxVolume;
     private float _maxWeight;
-    private float _currentweight=0;
-    private float _currentVolume=0;
-    private float _currentCount=0;
+    private float _currentweight = 0;
+    private float _currentVolume = 0;
+    private float _currentCount = 0;
     public Pack(int maxCount, float maxVolume, float maxWeight)
     {
         _items = new InventoryItem[maxCount];
         _maxCount = maxCount;
         _maxVolume = maxVolume;
-        _maxWeight = maxWeight;  
+        _maxWeight = maxWeight;
     }
 
     public bool Add(InventoryItem item)
@@ -23,19 +23,19 @@ public class Pack
     {
         if (item.GetVolume() + _currentVolume < _maxVolume && item.GetWeight() + _currentweight < _maxWeight)
         {
-           Console.WriteLine("we can add the properties of item in pack ");
-           for(int index = 0; index < _maxCount; index++)
+            Console.WriteLine("we can add the properties of item in pack ");
+            for (int index = 0; index < _maxCount; index++)
             {
                 if (_items[index] == null)
                 {
-                _items[index] = item;
-                _currentCount = index+1;
-                _currentVolume = item.GetVolume() + _currentVolume;
-                _currentweight = item.GetWeight() + _currentweight;
-                return true;
+                    _items[index] = item;
+                    _currentCount = index + 1;
+                    _currentVolume = item.GetVolume() + _currentVolume;
+                    _currentweight = item.GetWeight() + _currentweight;
+                    return true;
                 }
             }
-            
+
 
         }
         Console.WriteLine("pack limit is full");
@@ -47,7 +47,7 @@ public class Pack
     // Implement this class
     public override string ToString()
     {
-       return $"Pack is currently at {_currentCount}/{_maxCount} items, {_currentweight}/{_maxWeight} weight, and {_currentVolume}/{_maxVolume} volume.";
+        return $"Pack is currently at {_currentCount}/{_maxCount} items, {_currentweight}/{_maxWeight} weight, and {_currentVolume}/{_maxVolume} volume.";
     }
 }
 
