@@ -70,15 +70,12 @@ class Rope : InventoryItem
 class Water : InventoryItem
 {
     public Water() : base(2f, 3f) { }
-
 }
 class Food : InventoryItem
 {
     public Food() : base(1f, 0.5f) { }
-
 }
 class Sword : InventoryItem
 {
     public Sword() : base(5f, 3f) { }
-
 }
