@@ -1,24 +1,53 @@
 ﻿namespace Assignment;
 
-class Pack
+public class Pack
 {
     private InventoryItem[] _items; // You can use another data structure here if you prefer.
     // You may need another private member variable if you use an array data structure.
-
+    private int _maxCount;
+    private float _maxVolume;
+    private float _maxWeight;
+    private float _currentweight=0;
+    private float _currentVolume=0;
+    private float _currentCount=0;
     public Pack(int maxCount, float maxVolume, float maxWeight)
     {
-        throw new NotImplementedException();
+        _items = new InventoryItem[maxCount];
+        _maxCount = maxCount;
+        _maxVolume = maxVolume;
+        _maxWeight = maxWeight;  
     }
 
     public bool Add(InventoryItem item)
+
     {
-        throw new NotImplementedException();
+        if (item.GetVolume() + _currentVolume < _maxVolume && item.GetWeight() + _currentweight < _maxWeight)
+        {
+           Console.WriteLine("we can add the properties of item in pack ");
+           for(int index = 0; index < _maxCount; index++)
+            {
+                if (_items[index] == null)
+                {
+                _items[index] = item;
+                _currentCount = index+1;
+                _currentVolume = item.GetVolume() + _currentVolume;
+                _currentweight = item.GetWeight() + _currentweight;
+                return true;
+                }
+            }
+            
+
+        }
+        Console.WriteLine("pack limit is full");
+        return false;
+
+
     }
 
     // Implement this class
     public override string ToString()
     {
-        throw new NotImplementedException();
+       return $"Pack is currently at {_currentCount}/{_maxCount} items, {_currentweight}/{_maxWeight} weight, and {_currentVolume}/{_maxVolume} volume.";
     }
 }
 
@@ -43,7 +72,6 @@ public class InventoryItem
     {
         return _volume;
     }
-
     public float GetWeight()
     {
         return _weight;
