@@ -7,11 +7,45 @@ public class Pack
     private int _maxCount;
     private float _maxVolume;
     private float _maxWeight;
-    private float _currentweight = 0;
+    private float _currentWeight = 0;
     private float _currentVolume = 0;
     private float _currentCount = 0;
+
+    public int Get_maxCount()
+    {
+        return _maxCount;
+    }
+    public float Get_maxVolume()
+    {
+        return _maxVolume;
+    }
+    public float Get_maxWeight()
+    {
+        return _maxWeight;
+    }
+    public float Get_currentvolume()
+    {
+        return _currentVolume;
+    }
+    public float Get_currentWeight()
+    {
+        return _currentWeight;
+    }
+    public float Get_currentCount()
+    {
+        return _currentCount;
+    }
+
     public Pack(int maxCount, float maxVolume, float maxWeight)
     {
+        if (maxVolume <= 0f || maxWeight <= 0f)
+        {
+            throw new ArgumentOutOfRangeException($"An item can't have {maxVolume} volume or {maxWeight} weight");
+        }
+        else if (maxCount <= 0)
+        {
+            throw new ArgumentOutOfRangeException("You must carry something");
+        }
         _items = new InventoryItem[maxCount];
         _maxCount = maxCount;
         _maxVolume = maxVolume;
@@ -21,9 +55,8 @@ public class Pack
     public bool Add(InventoryItem item)
 
     {
-        if (item.GetVolume() + _currentVolume < _maxVolume && item.GetWeight() + _currentweight < _maxWeight)
+        if (item.GetVolume() + _currentVolume < _maxVolume && item.GetWeight() + _currentWeight < _maxWeight)
         {
-            Console.WriteLine("we can add the properties of item in pack ");
             for (int index = 0; index < _maxCount; index++)
             {
                 if (_items[index] == null)
@@ -31,7 +64,7 @@ public class Pack
                     _items[index] = item;
                     _currentCount = index + 1;
                     _currentVolume = item.GetVolume() + _currentVolume;
-                    _currentweight = item.GetWeight() + _currentweight;
+                    _currentWeight = item.GetWeight() + _currentWeight;
                     return true;
                 }
             }
@@ -47,7 +80,7 @@ public class Pack
     // Implement this class
     public override string ToString()
     {
-        return $"Pack is currently at {_currentCount}/{_maxCount} items, {_currentweight}/{_maxWeight} weight, and {_currentVolume}/{_maxVolume} volume.";
+        return $"Pack is currently at {_currentCount}/{_maxCount} items, {_currentWeight}/{_maxWeight} weight, and {_currentVolume}/{_maxVolume} volume.";
     }
 }
 
@@ -80,30 +113,30 @@ public class InventoryItem
 
 // Implement these classes - each inherits from InventoryItem
 // 1 line of code each - call base class constructor with appropriate arguments
-class Arrow : InventoryItem
+public class Arrow : InventoryItem
 {
     public Arrow() : base(0.1f, 0.05f) { }
 }
 
-class Bow : InventoryItem
+public class Bow : InventoryItem
 {
     public Bow() : base(1f, 4f) { }
 }
 
-class Rope : InventoryItem
+public class Rope : InventoryItem
 {
     public Rope() : base(1f, 1.5f) { }
 }
 
-class Water : InventoryItem
+public class Water : InventoryItem
 {
     public Water() : base(2f, 3f) { }
 }
-class Food : InventoryItem
+public class Food : InventoryItem
 {
     public Food() : base(1f, 0.5f) { }
 }
-class Sword : InventoryItem
+public class Sword : InventoryItem
 {
     public Sword() : base(5f, 3f) { }
 }
