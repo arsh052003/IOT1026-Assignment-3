@@ -10,10 +10,7 @@
 	<img title="MIT License" alt="license" src="https://img.shields.io/badge/license-MIT-informational?style=flat-square">	
     </a>
 </p>
-[![ci](https://github.com/arsh052003/IOT1026-Assignment-3/actions/workflows/ci.yml/badge.svg)](https://github.com/arsh052003/IOT1026-Assignment-3/actions/workflows/ci.yml)]
-[![formatting](https://github.com/arsh052003/IOT1026-Assignment-3/actions/workflows/formatting.yml/badge.svg)](https://github.com/arsh052003/IOT1026-Assignment-3/actions/workflows/formatting.yml)]
-[![codecov](https://codecov.io/gh/arsh052003/IOT1026-Assignment-3/branch/main/graph/badge.svg?token=QJTEILJZWH)](https://codecov.io/gh/arsh052003/IOT1026-Assignment-3)]
-        
+  
 
 
 # IOT1026-Assignment-3
@@ -22,3 +19,8 @@ Write a description of the project here and don't forget to update the badges.
 [Assignment Instructions](docs/instructions.md)  
 [How to start coding](docs/how-to-use.md)  
 [How to update status badges](docs/how-to-update-badges.md)
+        
+[![ci](https://github.com/arsh052003/IOT1026-Assignment-3/actions/workflows/ci.yml/badge.svg)](https://github.com/arsh052003/IOT1026-Assignment-3/actions/workflows/ci.yml)
+[![formatting](https://github.com/arsh052003/IOT1026-Assignment-3/actions/workflows/formatting.yml/badge.svg)](https://github.com/arsh052003/IOT1026-Assignment-3/actions/workflows/formatting.yml)
+[![codecov](https://codecov.io/gh/arsh052003/IOT1026-Assignment-3/branch/main/graph/badge.svg?token=QJTEILJZWH)](https://codecov.io/gh/arsh052003/IOT1026-Assignment-3)
+      
