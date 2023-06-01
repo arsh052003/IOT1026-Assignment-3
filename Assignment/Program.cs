@@ -13,9 +13,11 @@ namespace Assignment
             const int PackMaxItems = 0;
             const float PackMaxVolume = 20;
             const float PackMaxWeight = 30;
+            //initialize Pack class
             Pack pack = new(PackMaxItems, PackMaxVolume, PackMaxWeight);
             Arrow arr = new Arrow();
             Rope rope = new Rope();
+            //initialize the packtester
             PackTester.AddEquipment(pack);
 
 

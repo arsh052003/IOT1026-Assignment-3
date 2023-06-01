@@ -18,6 +18,7 @@ namespace AssignmentTest
             Assert.AreEqual(pack.Get_maxWeight(), PackMaxWeight);
         }
 
+        //This method is testing add method when user add more volume than pack volume limit.
         [TestMethod]
         public void VolumeOverflowTest()
         {
@@ -31,7 +32,7 @@ namespace AssignmentTest
             Assert.AreEqual(pack.Add(new Bow()), false);
         }
 
-
+        //This method is testing add method when user add more weight than pack weight limit.
         [TestMethod]
         public void WeightOverflowTest()
         {
@@ -45,6 +46,7 @@ namespace AssignmentTest
             Assert.AreEqual(pack.Add(new Sword()), false);
         }
 
+        //This method is testing add method when user add item more pack size.
         [TestMethod]
         public void ItemOverflowTest()
         {
@@ -60,7 +62,7 @@ namespace AssignmentTest
 
         }
 
-
+        //This test is to check error when user set pack size to zero.
         [TestMethod]
         public void ItemZeroTest()
         {
@@ -72,6 +74,7 @@ namespace AssignmentTest
             Assert.ThrowsException<ArgumentOutOfRangeException>(() => new Pack(PackMaxItems, PackMaxVolume, PackMaxWeight));
         }
 
+        //This test is to check error when user provides negative volume.
         [TestMethod]
         public void VolumeNegativeTest()
         {
@@ -83,6 +86,7 @@ namespace AssignmentTest
             Assert.ThrowsException<ArgumentOutOfRangeException>(() => new Pack(PackMaxItems, PackMaxVolume, PackMaxWeight));
         }
 
+        //This test is to check error when user provides negative weight.
         [TestMethod]
         public void WeightNegativeTest()
         {
@@ -94,6 +98,7 @@ namespace AssignmentTest
             Assert.ThrowsException<ArgumentOutOfRangeException>(() => new Pack(PackMaxItems, PackMaxVolume, PackMaxWeight));
         }
 
+        //This test for addingitem in pack.
         [TestMethod]
         public void AddItemsTest()
         {
