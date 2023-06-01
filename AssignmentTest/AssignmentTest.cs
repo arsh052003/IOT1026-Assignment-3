@@ -72,6 +72,7 @@ namespace AssignmentTest
             Assert.ThrowsException<ArgumentOutOfRangeException>(() => new Pack(PackMaxItems, PackMaxVolume, PackMaxWeight));
         }
 
+        [TestMethod]
         public void VolumeNegativeTest()
         {
             const int PackMaxItems = 19;
@@ -82,6 +83,7 @@ namespace AssignmentTest
             Assert.ThrowsException<ArgumentOutOfRangeException>(() => new Pack(PackMaxItems, PackMaxVolume, PackMaxWeight));
         }
 
+        [TestMethod]
         public void WeightNegativeTest()
         {
             const int PackMaxItems = 10;
@@ -90,6 +92,17 @@ namespace AssignmentTest
 
             //Pack pack = 
             Assert.ThrowsException<ArgumentOutOfRangeException>(() => new Pack(PackMaxItems, PackMaxVolume, PackMaxWeight));
+        }
+
+        [TestMethod]
+        public void AddItemsTest()
+        {
+            Pack pack = new Pack(40, 80, 90);
+            Assert.AreEqual(pack.Add(new Arrow()), true);
+            Assert.AreEqual(pack.Add(new Bow()), true);
+            Assert.AreEqual(pack.Add(new Rope()), true);
+            Assert.AreEqual(pack.Add(new Water()), true);
+
         }
 
 
