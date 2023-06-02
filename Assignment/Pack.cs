@@ -6,8 +6,8 @@ public class Pack
     // You may need another private member variable if you use an array data structure.
     //initialize the variables to keep track of _maxCount, _maxVolume, _maxWeight, _currentVolume, _currentWeight and _currentCount.
     private int _maxCount = 4;
-    private float _maxVolume=100;
-    private float _maxWeight=100;
+    private float _maxVolume = 100;
+    private float _maxWeight = 100;
     private float _currentWeight = 0;
     private float _currentVolume = 0;
     private float _currentCount = 0;
