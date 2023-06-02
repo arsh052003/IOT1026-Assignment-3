@@ -12,7 +12,6 @@
   The below images show output when we create instance for packtester:
   
 <img width="691" alt="Screen Shot 2023-06-01 at 09 44 24" src="https://github.com/arsh052003/IOT1026-Assignment-3/assets/122691385/6abf391b-871c-4a01-8ef6-46bb6e800314">
-<img width="1440" alt="Screen Shot 2023-06-01 at 03 32 19" src="https://github.com/arsh052003/IOT1026-Assignment-3/assets/122691385/076982b6-7f0f-4e14-b637-53ea99ad77e6">
 <img width="691" alt="Screen Shot 2023-06-01 at 09 45 49" src="https://github.com/arsh052003/IOT1026-Assignment-3/assets/122691385/a19c2ffd-c2e1-418b-821a-44140ab4ea88">
 <img width="518" alt="Screen Shot 2023-06-01 at 09 46 29" src="https://github.com/arsh052003/IOT1026-Assignment-3/assets/122691385/8a4d43bf-4b33-4ad6-a88c-5304e4537e27">
 
